@@ -88,6 +88,7 @@ const NavMenu = styled.div`
         right: 0;
         bottom: -6px;
         opacity: 0;
+        transform-origin: left center;
         transform: scaleX(0);
       }
     }
