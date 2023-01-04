@@ -10,6 +10,28 @@ function Details() {
       <MovieTitle>
         <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/D7AEE1F05D10FC37C873176AAA26F777FC1B71E7A6563F36C6B1B497CAB1CEC2/scale?width=1440&aspectRatio=1.78" />
       </MovieTitle>
+      <Controls>
+        <PlayButton>
+          <img src="/images/play-icon-black.png" />
+          <span>PLAY</span>
+        </PlayButton>
+        <TrailerButton>
+          <img src="/images/play-icon-white.png" />
+          <span>TRAILER</span>
+        </TrailerButton>
+        <AddButton>
+          <img src="/images/watchlist-icon.svg" />
+        </AddButton>
+        <GroupButton>
+          <img src="/images/group-icon.png" />
+        </GroupButton>
+      </Controls>
+      <SubTitle>2018 ◦ 7m ◦ Family, Fantasy, Kids, Animation</SubTitle>
+      <Description>
+        An ageing Chinese mother, feeling alone when her child moves out, gets a
+        second chance at motherhood when one of her dumplings comes to life. But
+        she finds that nothing stays cute and small forever.
+      </Description>
     </Container>
   );
 }
@@ -46,4 +68,69 @@ const MovieTitle = styled.div`
     height: 100%;
     object-fit: contain;
   }
+`;
+
+const Controls = styled.div`
+  display: flex;
+  gap: 24px;
+  align-items: center;
+`;
+
+const PlayButton = styled.button`
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  border: none;
+  background: rgb(249, 249, 249);
+  height: 56px;
+  letter-spacing: 1.8px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(198, 198, 198);
+  }
+`;
+
+const TrailerButton = styled(PlayButton)`
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgb(249, 249, 249);
+  color: rgb(249, 249, 249);
+`;
+
+const AddButton = styled.button`
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  img {
+    width: 24px;
+  }
+`;
+
+const GroupButton = styled(AddButton)`
+  background-color: rgb(0, 0, 0);
+  img {
+    width: 30px;
+  }
+`;
+
+const SubTitle = styled.div`
+  color: rgb(349, 249, 249);
+  font-size: 16px;
+  min-height: 20px;
+  margin-top: 24px;
+`;
+
+const Description = styled.div`
+  // width: ;
+  line-height: 1.4;
+  font-size: 20px;
+  margin-top: 16px;
 `;
