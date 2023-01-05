@@ -3,8 +3,16 @@ import styled from "styled-components";
 import ImgCarousel from "./ImgCarousel";
 import Movies from "./Movies";
 import Viewers from "./Viewers";
+import { useEffect } from "react";
+import db from "../firebase";
 
 function Home() {
+  useEffect(() => {
+    db.collection("movies").onSnapshot((snapshot) => {
+      console.log(snapshot);
+    });
+  }, []);
+
   return (
     <Container>
       <ImgCarousel />

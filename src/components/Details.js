@@ -63,6 +63,8 @@ const Background = styled.div`
 const MovieTitle = styled.div`
   height: 30vh;
   width: 35vw;
+  margin-top: 48px;
+  margin-bottom: 16px;
   img {
     width: 100%;
     height: 100%;
@@ -129,7 +131,7 @@ const SubTitle = styled.div`
 `;
 
 const Description = styled.div`
-  // width: ;
+  max-width: 750px;
   line-height: 1.4;
   font-size: 20px;
   margin-top: 16px;
