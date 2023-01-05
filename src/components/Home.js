@@ -7,11 +7,9 @@ import { useEffect } from "react";
 import db from "../firebase";
 
 function Home() {
-  useEffect(() => {
-    db.collection("movies").onSnapshot((snapshot) => {
-      console.log(snapshot);
-    });
-  }, []);
+  // useEffect(() => {
+  //   console.log("Hello");
+  // });
 
   return (
     <Container>
